@@ -1,4 +1,5 @@
 from typing import List
+import sys
 
 
 # 5.1
@@ -20,7 +21,7 @@ def flog_with_dynamic_programming_with_receive(height: List[int]) -> int:
 
 # 5.3
 def flog_with_dynamic_programming_with_relaxation(height: List[int]) -> int:
-    dp = [float("inf")] * len(height)
+    dp = [sys.maxsize] * len(height)
 
     for i in range(len(height)):
         if i == 0:
@@ -35,7 +36,7 @@ def flog_with_dynamic_programming_with_relaxation(height: List[int]) -> int:
 
 # code 5.4
 def flog_with_dynamic_programming_distribute(height: List[int]) -> int:
-    dp = [float("inf")] * len(height)
+    dp = [sys.maxsize] * len(height)
 
     for i in range(len(height)):
         if i == 0:
@@ -99,9 +100,9 @@ def flog_with_recursive_memo(height: List[int]) -> int:
 
 if __name__ == '__main__':
     # all will return 8
-    height = [2, 9, 4, 5, 1, 6, 10]
-    print(flog_with_dynamic_programming_with_receive(height))
-    print(flog_with_dynamic_programming_with_relaxation(height))
-    print(flog_with_dynamic_programming_distribute(height))
-    print(flog_with_recursive(height))
-    print(flog_with_recursive_memo(height))
+    heights = [2, 9, 4, 5, 1, 6, 10]
+    print(flog_with_dynamic_programming_with_receive(heights))
+    print(flog_with_dynamic_programming_with_relaxation(heights))
+    print(flog_with_dynamic_programming_distribute(heights))
+    print(flog_with_recursive(heights))
+    print(flog_with_recursive_memo(heights))

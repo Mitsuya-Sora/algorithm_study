@@ -46,7 +46,6 @@ def fibo_recursive_using_chache(nth: int) -> int:
     return _fibo(6)
 
 
-
 if __name__ == '__main__':
     print(fibo_recursive(6))
     # 8
