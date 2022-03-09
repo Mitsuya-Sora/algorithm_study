@@ -31,5 +31,3 @@ if __name__ == '__main__':
     # false
     print(is_15)
     # true
-    print(is_20)
-    # true
